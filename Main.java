@@ -36,7 +36,7 @@ public class Main {
         }
         int even_count = 0, odd_count = 0, even_sum = 0, odd_sum = 0, sum = 0;
         for (int i = 0; i < 40; i++){
-            int random = (int)(Math.random() * num_b + num_a);
+            int random = (int)(Math.random() * (num_b - num_a + 1) + num_a);
             odd_count += random % 2 == 1 ? 1 : 0;
             even_count += random % 2 == 0 ? 1 : 0;
             odd_sum += random % 2 == 1 ? random : 0;
@@ -53,7 +53,7 @@ public class Main {
         int max = Math.max(odd_sum, even_sum);
 
         for (int i = 1; i <= 5; i++) {
-            System.out.println( i + ") numbers between " + min + " & " + max + " " + (int)(Math.random() * max + min));
+            System.out.println( i + ") numbers between " + min + " & " + max + " " + (int)(Math.random() * (max - min + 1) + min));
         }
     }
 }
